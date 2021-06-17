@@ -1,16 +1,73 @@
-.boxed {
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  
+  animation:slide 10s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+ 
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+boxed {
   
    
   
     width: 70vw;
     text-align: justify;
-    border-radius: 25px;
+    border-radius: 40px;
     background-color: rgb(80, 79, 79);
     border: 3px solid #ff4b4b;
     padding: 20px;
     font-family: "Courier New", monospace;
-    color: white;
+    color:black;
     box-shadow: 0px 0px 10px #ff4b4b;
+    
   }
 
   @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
@@ -20,8 +77,9 @@
     flex-direction: column;
     justify-content: center;
     padding: 10%;
-    background-color: #121212;  
+    background-color:#121212;  
     align-items: center;
+    
   }
   
   #parent {
@@ -30,7 +88,7 @@
     overflow: hidden; 
     font-family: 'Courier New', monospace;  
     font-size: 20px;
-    color:white;
+    color:black;
     position: relative;
   }
   
@@ -71,7 +129,7 @@
     display: inline-block;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
-    color: white;
+    color: black;
     animation: fadeIn linear 2s;
     -webkit-animation: fadeIn linear 2s;
     -moz-animation: fadeIn linear 5s;
@@ -105,4 +163,7 @@
     0% {opacity:0;}
     100% {opacity:1;}
   }
-  
+
+.nowrap {
+  white-space: nowrap ;
+}
